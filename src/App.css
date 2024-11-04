@@ -7,29 +7,15 @@
   text-align: center;
 }
 
+/* NavBar Styles */
 .NavBar {
-  background-color: rgb(76, 43, 226);
+  background-color: rgb(76, 43, 226);  
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
   border-radius: 8px;
-  height: 100%;
-}
-
-.NavDiv {
-  width: 33%;
-}
-
-.NavTitle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.NavCart {
-  text-align: right;
-  padding: 0 10px;
+  margin-bottom: 20px;
 }
 
 .NavUser {
@@ -37,117 +23,213 @@
   padding: 0 10px;
 }
 
+.NavTitle {
+  font-size: 24px;
+}
+
+.NavCart {
+  position: relative;
+  padding: 0 10px;
+}
+
+.NavCart img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Groceries App Container */
 .GroceriesApp-Container {
-  width: 100%;
   display: flex;
   justify-content: space-between;
-
-  /* max-width: 800px; */
-  /* border: 1px solid white; */
 }
 
-.CartContainer {
-  width: 25%;
-  justify-content: center;
-
-  /* position: sticky; */
-  /* top: 0; Adjust this value as needed */
-  /* max-height: 100vh; Ensure it doesn't exceed the viewport height */
-  /* overflow-y: auto; Add scroll if content exceeds the container height */
-
-  /* border: 1px solid white; */
-}
-
-.CartCard {
-  display: flex;
-  /* flex-direction: column; */
-  justify-content: space-around;
-  align-items: center;
-  /* flex-wrap: wrap; */
-  border: 2px wheat solid;
-  border-radius: 10px;
-  margin: 10px;
-  padding: 5px;
-  background-color: rgb(43, 48, 54);
-}
-
-.CartCardInfo {
-  /* display: flex;
-  justify-content: space-around; */
-  width: 50%;
-}
-
+/* Product Container */
 .ProductsContainer {
-  width: 75%;
-  max-width: 800px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* border: 1px solid white; */
+  gap: 20px;
 }
 
 .ProductCard {
-  width: 20%;
-  border: 2px wheat solid;
+  width: 15%;
+  border: 2px solid wheat;
   border-radius: 10px;
-  margin: 10px;
-  padding: 5px;
+  background-color: #222;
+  padding: 15px;
+  text-align: center;
+}
+
+.ProductCard img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.ProductCard h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.ProductCard p {
+  font-size: 16px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.ProductCard .price {
+  font-size: 16px;
+  margin: 10px 0;
 }
 
 .ProductQuantityDiv {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .QuantityBtn {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25px;
-  height: 25px;
-  border: 1px solid white;
-  border-radius: 50%;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   margin: 0 5px;
 }
+
 .QuantityBtn:hover {
   background-color: rgb(76, 43, 226);
 }
 
-img {
-  height: 50px;
+.add-to-cart-btn {
+  background-color: #4a00e0;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
   border-radius: 5px;
 }
 
-.counter-container {
-  /* border: 1px solid white; */
-  display: flex;
-  width: 70%;
-  height: 20px;
-  justify-content: space-around;
-  align-items: center;
-  margin: 5px auto;
+/* Cart Container */
+.CartContainer {
+  width: 25%;
+  padding: 20px;
+  height: auto;
 }
 
-.counter-button {
-  width: 15px;
-  height: 15px;
-  border: 1px solid white;
-  border-radius: 50%;
+.CartContainer h3 {
+  font-size: 18px;
+  height: auto;
+  margin-top: -30px;
+
+}
+
+.CartCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2b2d42;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 2px solid #ffcb74;
+}
+
+.CartCardInfo {
+  flex: 1;
+  text-align: center;
+}
+
+.CartCard img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.CartCardInfo h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.CartCardInfo .price {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Quantity Controls */
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+}
+
+.QuantityBtn {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CartCard Actions (Right Side) */
+.CartCardActions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.CartCardTotal {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.CartCardTotal .total-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.CartCardTotal .total-amount {
+  color: goldenrod;
+  font-weight: bold;
+}
+
+/* Remove Button */
+.RemoveButton {
+  background-color: red;
+  padding: 5px 10px;
+  font-size: 12px;
   cursor: pointer;
 }
 
 .CartListBtns {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
-.RemoveButton {
-  background-color: rgb(190, 0, 0);
+.EmptyCartButton {
+  background-color: red;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
-#BuyButton {
+#CheckoutButton {
   background-color: green;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
   width: 50%;
 }
